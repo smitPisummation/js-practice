@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Write a JavaScript program to list the properties of a JavaScript object.
+      const student = {
+        name: "David Rayy",
+        sclass: "VI",
+        rollno: 12,
+      };
+      console.log(Object.keys(student));
+
+      //Write a JavaScript program to delete the rollno property from the following object. Also print the object before or after deleting the property.
+      const student1 = {
+        name: "David Rayy",
+        sclass: "VI",
+        rollno: 12,
+      };
+      delete student1.rollno;
+      console.log(student1);
+
+      //Write a JavaScript program to get the length of a JavaScript object.
+      const student2 = {
+        name: "David Rayy",
+        sclass: "VI",
+        rollno: 12,
+      };
+      const lengthOfObject = Object.keys(student2);
+      console.log(lengthOfObject.length);
+
+      //Write a JavaScript program to display the reading status (i.e. display book name, author name and reading status) of the following books.
+
+      const library = [
+        {
+          author: "Bill Gates",
+          title: "The Road Ahead",
+          readingStatus: true,
+        },
+        {
+          author: "Steve Jobs",
+          title: "Walter Isaacson",
+          readingStatus: true,
+        },
+        {
+          author: "Suzanne Collins",
+          title: "Mockingjay: The Final Book of The Hunger Games",
+          readingStatus: false,
+        },
+      ];
+
+      for (let i = 0; i < library.length; i++) {
+        console.log(Object.values(library[i]));
+      }
+
+    
+    </script>
+  </body>
+</html>
