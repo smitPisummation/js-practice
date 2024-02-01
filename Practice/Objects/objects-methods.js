@@ -1,21 +1,21 @@
 const objOne = {
-    id1 : 1,
-    name1 : "smit",
-    gender1 : "male",
+    id1: 1,
+    name1: "smit",
+    gender1: "male",
 };
 
 const objTwo = {
-    id : 2,
-    name : "rani",
-    gender : "female",
-    mobile : 9099456236
+    id: 2,
+    name: "rani",
+    gender: "female",
+    mobile: 9099456236
 }
 
 
 // Object.assign
 
 console.log("Object.assign(source, target)");
-const opThree = Object.assign({}, objTwo) ;
+const opThree = Object.assign({}, objTwo);
 console.log(opThree);
 
 console.log(objOne);
@@ -36,14 +36,14 @@ console.log(objCreated);
 // Object.keys
 console.log("Object.keys");
 console.log(Object.keys(objOne));
-console.log(Object.keys( objTwo));
+console.log(Object.keys(objTwo));
 console.log(Object.keys(objOne, objTwo));
 
 // Object.value
 
 console.log("Object.value");
 console.log(Object.values(objOne));
-console.log(Object.values( objTwo));
+console.log(Object.values(objTwo));
 console.log(Object.values(objOne, objTwo));
 
 
@@ -52,16 +52,16 @@ console.log(Object.values(objOne, objTwo));
 console.log("Object.entires");
 
 console.log(Object.entries(objOne));
-console.log(Object.entries( objTwo));
+console.log(Object.entries(objTwo));
 console.log(Object.entries(objOne, objTwo));
 
 // Object.freeze
 
 
 const freezeObj = {
-    id1 : 1,
-    name1 : "smit",
-    gender1 : "male",
+    id1: 1,
+    name1: "smit",
+    gender1: "male",
 };
 
 Object.freeze(freezeObj);
@@ -79,9 +79,9 @@ console.log(Object.isFrozen(objOne));
 // Object.seal
 
 const sealObj = {
-    id1 : 1,
-    name1 : "smit",
-    gender1 : "male",
+    id1: 1,
+    name1: "smit",
+    gender1: "male",
 };
 
 Object.seal(sealObj);
@@ -96,5 +96,25 @@ console.log(Object.isSealed(objOne));
 
 // Object.is
 
-console.log(Object.is(objOne,objOne));
-console.log(Object.is(objOne,objTwo));
+console.log(Object.is(objOne, objOne));
+console.log(Object.is(objOne, objTwo));
+
+
+const user = {
+    id: 1,
+    name: 'smit patel',
+    company: {
+        id: 10,
+        name: 'isummation'
+        ,
+    },
+    city : 'Ahmedabad'
+}
+
+// Object destructuring
+
+const { id : userId , name : userName , company :{name:companyName} } = user;
+
+console.log( userId , userName ,companyName );
+
+

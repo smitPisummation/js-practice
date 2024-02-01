@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // task-1
+
+      const mexico = {
+        id: 24,
+        name: "Mexico",
+        capital: "Mexico City",
+        neighbours: ["USA", "Guatemala", "Belize"],
+      };
+
+      const { name, id: mexicoId, capital, neighbours } = mexico;
+
+      console.log("step : 1");
+      console.log(mexico);
+      
+      console.log("step : 2 => id value changed");
+      mexico.id = 25;
+      console.log(mexico.id);
+
+
+      console.log("step : 3");
+      console.log(mexico);
+      
+      console.log("step : 4 => value added");
+      neighbours.push("Honduras");
+      console.log(neighbours);
+      
+      console.log("step : 5");
+      console.log(mexico);
+
+
+
+
+    </script>
+  </body>
+</html>
