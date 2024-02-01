@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const banana = { name: "banana", quantity: 1, price: 1.95 };
+      const apple = { name: "apple", quantity: 1, price: 1.45 };
+      const candy = { name: "candy", quantity: 1, price: 3.5 };
+
+      const store = {
+        storeNumber : 5,
+        locationCity : "Milan",
+        locationCountry : "Italy",
+        products: [banana, apple, candy],
+      }
+
+      const {storeNumber,locationCity,locationCountry,products } = store;
+
+      console.log("Step - 1");
+      console.log(store);
+      
+      console.log("Step - 2");
+      console.log(products);
+      
+      console.log("Step - 3");
+      //   console.log(products.length)
+      for (let i=0; i<products.length; i++){
+          const key = i+1;
+          if(key==3){
+              console.log(products.at(2));
+            }
+        }
+        
+        console.log("Step - 4");
+        console.log(store.products.at(0));
+        const priceChange = store.products.at(0);
+        
+        
+        console.log("Step - 5");
+        priceChange.price = 1.75;
+        console.log(banana);
+        
+        console.log("Step - 6");
+        
+        console.log(store)
+        console.log(banana)
+        
+        
+        console.log("Step - 7");
+        candy.price = 4.99;
+        console.log(store)
+        console.log(candy)
+      </script>
+  </body>
+</html>

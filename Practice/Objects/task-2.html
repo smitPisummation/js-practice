@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const myPet = {
+        name: "Sudo",
+        type: "Dug",
+        breed: "Poodle",
+        age: 7,
+        friends: ["Bit", "Byte", "Data"],
+      };
+
+      const { name, type, breed, age, friends } = myPet;
+
+      console.log("setp - 1");
+      console.log(myPet);
+
+      console.log("setp - 2");
+      myPet.colour = "black";
+      console.log(myPet);
+
+      console.log("setp - 3");
+      console.log( myPet.breed = "Beagle" )
+
+      console.log("setp - 4");
+      console.log(myPet.friends.indexOf("Data"));
+
+      console.log("setp - 5");
+      friends.pop();
+      console.log(friends);
+      console.log(myPet);
+
+      console.log("setp - 6");
+      friends.push("Chip");
+      console.log(friends);
+      console.log(myPet);
+      
+
+    </script>
+  </body>
+</html>

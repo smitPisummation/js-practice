@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const houseForSale = {
+        area: 940,
+        value: 320000,
+        streetName: "Fifth Street",
+        built: "2012",
+        owner: { name: "Blake", age: 29 },
+        offers: [290000, 295000, 315000, 312000],
+      };
+      const { are, value, streetName, built, owner, offers } = houseForSale;
+      console.log("Step -1");
+      console.log(houseForSale);
+
+      console.log("Step -2");
+      delete houseForSale.built;
+      console.log(houseForSale);
+
+      console.log("Step -3");
+      owner.age = 30;
+      console.log(houseForSale);
+
+      console.log("Step -4");
+
+      console.log(offers);
+
+      //   for (let i=0;  ) {
+
+      //   }
+
+      console.log("Step -5");
+      houseForSale.salePrice = 312000;
+
+      console.log("Step -6");
+      console.log(houseForSale);
+    </script>
+  </body>
+</html>
