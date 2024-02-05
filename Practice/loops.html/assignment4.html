@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const n = 5;
+        for (let i = 1; i <= n * 2; i++) {
+            if (i <= n) {
+                const cols = n - i + 1;
+                for (let j = 1; j <= cols; j++) {
+
+                    document.write("* ");
+                }
+            } else {
+                const cols = i - n;
+                for (let j = 1; j <= cols; j++) {
+
+                    document.write("* ");
+                }
+
+            }
+
+            document.write("<br />")
+        }
+
+// ----> OR
+
+    //     for (let i = 1; i <= rows * 2; i++) {
+    //     const cols = i <= rows ? rows - i + 1 : i - rows;
+    //     for (let j = 1; j <= cols; j++) {
+    //       document.write("* ");
+    //     }
+    //     console.log("\n");
+    //     document.write("<br/>");
+    //   }
+
+
+
+    </script>
+</body>
+
+</html>
