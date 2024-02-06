@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const n = 5;
+        for (let i = 1; i <= n * 2; i++) {
+            for (let j = 1; j < n * 2; j++) {
+                if (i <= n) {
+                    if (j <= n + i - 1) {
+                        const cols = j <= n - i ? document.write("^ ") : document.write("* ");
+                        // if (j <= n - i) {
+                        //     document.write("^ ");
+                        // } else {
+                        //     document.write("* ")
+                        // }
+                        // document.write("* ")
+                    }
+                    // document.write("* ")
+                } else {
+                    if (j <= n * 2 - i + n) {
+                        const lower = j <= i - n - 1 ? document.write("^ ") : document.write("* ");
+                        // if (j <= i - (n + 1)) {
+                        //     document.write("^ ");
+                        // } else {
+                        //     document.write("* ")
+                        // }
+                    }
+                }
+            }
+            document.write("<br />")
+        }
+
+    </script>
+
+    <!-- <script>
+        const n = 4;
+        let max = 0;
+        for(let i = 1; i <= n*2)
+    </script> -->
+</body>
+
+</html>
