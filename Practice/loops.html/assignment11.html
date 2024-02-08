@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const n = 7;
+        let o = 1;
+        const centerStar = Math.ceil(n / 2);
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= n; j++) {
+                if (i === centerStar || j === centerStar || (j === 1 && i <= centerStar) || (i === 1 && j >= centerStar) || (j == n && i >= centerStar) || (i == n && j <= centerStar)) {
+                    document.write("* ");
+                } else {
+                    document.write("<span>* </span>")
+                }
+
+
+            }
+            document.write("<br />")
+        }
+    </script>
+</body>
+
+</html>
