@@ -231,7 +231,7 @@ const users = [
     }
 ]
 
-const toDo = [
+const todos = [
     {
         "userId": 1,
         "id": 1,
@@ -41045,9 +41045,9 @@ const photos = [
         "thumbnailUrl": "https://via.placeholder.com/150/6dd9cb"
     }
 ]
+// console.time();
 
-
-const albumMap = albums.map( (album,index,array) => {
+const albumMap = albums.map((album, index, array) => {
     album['Photos'] = photos.filter(photo => photo.albumId === album.id)
     return album;
 });
@@ -41064,11 +41064,24 @@ const postMap = posts.map((post, index, array) => {
 const userMap = users.map((user, index, array) => {
     delete user.address;
     delete user.company;
-    
+
     user["Albums"] = albumMap.filter(album => album.userId === user.id)
     user['Posts'] = postMap.filter(post => post.userId === user.id)
-    user['todos'] = toDo.filter(todo => todo.userId === user.id);
+    user['todos'] = todos.filter(todo => todo.userId === user.id);
     return user;
 }
 );
 console.log(userMap);
+console.timeEnd();
+
+
+
+
+
+
+
+
+
+
+
+
