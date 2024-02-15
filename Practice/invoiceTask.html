@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* gap: 30px; */
+        }
+
+        main {
+            width: 50%;
+            height: 70%;
+            border: 1px solid black;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 10px;
+        }
+
+        table {
+
+            width: 50%;
+            border: 1px solid gray;
+            padding: 0px;
+            border-bottom: none;
+
+        }
+
+        tr,
+        th,
+        td {
+            border-right: 1px solid gray;
+            border-bottom: 1px solid gray;
+            padding: 10px;
+        }
+
+        tr>th:last-child,
+        tr>td:last-child {
+            border-right: none;
+        }
+
+        button {
+            background: #ff0099;
+            background: -webkit-linear-gradient(to right, #ff0099, #493240);
+            background: linear-gradient(to right, #ff0099, #493240);
+            color: white;
+            padding: 10px;
+            border: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div style="display: flex; width: 50%; align-items: center; justify-content: space-between; padding: 10px;">
+        <h1>Invoice</h1>
+        <div>
+            <button type="button" onclick="generateRow(1)">Add A Row</button>
+            <button type="button" onclick="deleteRow(1)">Delete A Row</button>
+        </div>
+    </div>
+
+
+    <script src="./invoiceTask.js"></script>
+</body>
+
+</html>
