@@ -1,0 +1,35 @@
+<!-- Check checkbox and if it is checked then print it's value in label -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <input type="checkbox" name="cricket" value="cricket" id="cricket" onclick="isChecked(this)">
+        <label for="cricket" id="labelCricket"></label>
+
+        <input type="checkbox" name="volleyball" value="volleyball" id="volleyball" onclick="isChecked(this)">
+        <label for="volleyball" id="labelVolleyball"></label>
+
+        <input type="checkbox" name="basketball" id="basketball" value="basketball" onclick="isChecked(this)">
+        <label for="basketball" id="labelBasketball"></label>
+    </main>
+
+
+    <script src="./checkCheckBox.js"></script>
+
+</body>
+
+</html>

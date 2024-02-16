@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        main {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: #43cea2;
+            background: -webkit-linear-gradient(to right, #43cea2, #185a9d);
+            background: linear-gradient(to right, #43cea2, #185a9d);
+        }
+
+        .div {
+            border: 1px solid black;
+            height: 50%;
+            width: 50%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        input {
+            height: 30px;
+            width: 300px;
+            font-size: 1.2rem;
+        }
+
+        button {
+            height: 8vh;
+            width: 10vw;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <span id="usedToPrint"> Smit Patel </span>
+        <div class="div">
+            <input type="text" name="name" id="name">
+            <div>
+                <button type="button" onclick="setName()"> Set Name </button>
+                <button type="button" onclick="getName()"> Get Name </button>
+            </div>
+        </div>
+    </main>
+
+
+    <script>
+        let value = document.getElementById('usedToPrint').innerHTML;
+        // console.log(value);
+        function setName() {
+            document.getElementById('name').value = `${value}`
+        }
+        function getName() {
+            const value = document.getElementById('name').value;
+            if (document.getElementById('name').value === "") {
+                alert("Enter Your Name")
+            } else alert(value);
+        }
+    </script>
+</body>
+
+</html>

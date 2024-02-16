@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        main {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #c0392b;
+            background: -webkit-linear-gradient(to right, #c0392b, #8e44ad);
+            background: linear-gradient(to right, #c0392b, #8e44ad);
+
+        }
+
+        #main-div {
+            height: 90%;
+            width: 70%;
+            /* border: 1px solid black; */
+            border-radius: 20px;
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #inner-div {
+            height: 45vh;
+            width: 50vw;
+            border: 3px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        fieldset {
+            padding: 10px;
+        }
+
+        legend {
+            margin-left: 8px;
+            font-size: 0.8rem;
+        }
+
+        button {
+            background: #ff0099;
+            background: -webkit-linear-gradient(to right, #ff0099, #493240);
+            background: linear-gradient(to right, #ff0099, #493240);
+            color: white;
+            padding: 10px;
+            border: none;
+        }
+
+        select {
+            padding: 10px;
+        }
+
+        .field-div {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div id="main-div">
+            <div id="inner-div">
+                <h1>Hello Coder</h1>
+            </div>
+            <div class="field-div">
+                <fieldset>
+                    <legend>Set Text Color</legend>
+                    <select name="textColor" id="textColor">
+                        <option value="select">Select Color</option>
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                        <option value="white">White</option>
+                    </select>
+                    <button type="button" onclick="setTextColor()">Set Text Color</button>
+                </fieldset>
+                <fieldset>
+                    <legend>Set Background Color</legend>
+                    <select name="bgColor" id="bgColor">
+                        <option value="select">Select Color</option>
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                        <option value="white">White</option>
+                    </select>
+                    <button type="button" onclick="setBgColor()">Set Background Color</button>
+                </fieldset>
+                <fieldset>
+                    <legend>Set Border Color</legend>
+                    <select name="borderColor" id="borderColor">
+                        <option value="select">Select Color</option>
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                        <option value="white">White</option>
+                    </select>
+                    <button type="button" onclick="setBorderColor()">Set Border Color</button>
+                </fieldset>
+            </div>
+        </div>
+    </main>
+
+
+
+    <script>
+        function setTextColor() {
+            if (document.getElementById("textColor").value === 'select') {
+                alert("First select the Color");
+                return false;
+            }
+            if (document.getElementById("textColor").value === 'blue') {
+                document.getElementById("inner-div").style.color = "blue";
+            }
+            if (document.getElementById("textColor").value === 'red') {
+                document.getElementById("inner-div").style.color = "red";
+            }
+            if (document.getElementById("textColor").value === 'white') {
+                document.getElementById("inner-div").style.color = "white";
+            }
+            if (document.getElementById("textColor").value === 'green') {
+                document.getElementById("inner-div").style.color = "green";
+            }
+        }
+        function setBgColor() {
+            if (document.getElementById("bgColor").value === 'select') {
+                alert("First select the Background Color")
+            }
+            if (document.getElementById("bgColor").value === 'blue') {
+                document.getElementById("inner-div").style.backgroundColor = "blue";
+            }
+            if (document.getElementById("bgColor").value === 'red') {
+                document.getElementById("inner-div").style.backgroundColor = "red";
+            }
+            if (document.getElementById("bgColor").value === 'white') {
+                document.getElementById("inner-div").style.backgroundColor = "white";
+            }
+            if (document.getElementById("bgColor").value === 'green') {
+                document.getElementById("inner-div").style.backgroundColor = "green";
+            }
+        }
+        function setBorderColor() {
+            if (document.getElementById("borderColor").value === 'select') {
+                alert("First select the Border Color")
+            }
+            if (document.getElementById("borderColor").value === 'blue') {
+                document.getElementById("inner-div").style.borderColor = "blue";
+            }
+            if (document.getElementById("borderColor").value === 'red') {
+                document.getElementById("inner-div").style.borderColor = "red";
+            }
+            if (document.getElementById("borderColor").value === 'white') {
+                document.getElementById("inner-div").style.borderColor = "white";
+            }
+            if (document.getElementById("borderColor").value === 'green') {
+                document.getElementById("inner-div").style.borderColor = "green";
+            }
+        }
+    </script>
+</body>
+
+</html>

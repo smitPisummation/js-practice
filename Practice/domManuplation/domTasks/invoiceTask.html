@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* gap: 30px; */
+        }
+
+        main {
+            width: 50%;
+            height: 70%;
+            border: 1px solid black;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 10px;
+        }
+
+        table {
+
+            width: 50%;
+            border: 1px solid gray;
+            padding: 0px;
+            border-bottom: none;
+
+        }
+
+        input {
+            height: 100%;
+            width: 100%;
+            margin-left: -10px;
+            padding-left: 10px;
+            border: none;
+        }
+
+        tr,
+        th,
+        td {
+            border-right: 1px solid gray;
+            border-bottom: 1px solid gray;
+            /* padding: 10px; */
+            height: 40px;
+            width: 250px;
+            padding-left: 10px;
+        }
+
+        tr>th:last-child,
+        tr>td:last-child {
+            border-right: none;
+        }
+
+        button {
+            background: #ff0099;
+            background: -webkit-linear-gradient(to right, #ff0099, #493240);
+            background: linear-gradient(to right, #ff0099, #493240);
+            color: white;
+            padding: 10px;
+            border: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div style="display: flex; width: 50%; align-items: center; justify-content: space-between; padding: 10px;">
+        <h1>Invoice</h1>
+        <!-- <input type="text" > -->
+
+        <div>
+            <button type="button" onclick="generateRow()">Add A Row</button>
+            <button type="button" onclick="deleteRow()">Delete A Row</button>
+        </div>
+    </div>
+
+
+    <script src="./invoiceTask.js"></script>
+</body>
+
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Table</title>  
+</head>
+ 
+<body>
+    <div class="main">
+        <div class="head">
+            <h2>Invoice</h2>
+        </div>
+        <hr>
+       
+        <div class="add">
+            <button type="button" id="add" onclick="addRow()">Add Item</button>
+        </div>
+ 
+        <input type="text" name="rowCounter" id="rowCounter" value="1" />
+ 
+        <table id="addRow" cellpadding="5" cellspacing="0" width="100%" border="1">
+            <tr>
+                <td>
+                    <input type="text" name="item1" value="" />
+                </td>
+                <td>
+                    <input type="text" name="qty1" value="" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function addRow() {
+            const counterObj = document.getElementById('rowCounter');
+            let counter = +counterObj.value;
+            counter++;
+            counterObj.value = counter;
+            const table = document.getElementById('addRow');
+ 
+            const tr = document.createElement('tr');
+            const td = document.createElement('td');
+            tr.append(td);
+ 
+            const inputItem =  generateInput({
+                type: 'text',
+                name: `item${counter}`,
+                id: `item${counter}`,
+                value: ''
+            });
+ 
+            td.append(inputItem);
+ 
+            const td2 = document.createElement('td');
+            tr.append(td2);
+ 
+            const inputQty = generateInput({
+                type: 'text',
+                name: `qty${counter}`,
+                id: `qty${counter}`,
+                value: ''
+            });
+            td2.append(inputQty);
+ 
+            table.append(tr);
+            /* const row = `
+                <tr>
+                    <td>
+                        <input type="text" name="item${counter}" value="" />
+                    </td>
+                    <td>
+                        <input type="text" name="qty${counter}" value="" />
+                    </td>
+                </tr>
+            `;
+ 
+            table.append(row); */
+        }
+ 
+        function generateInput(properties) { // good
+            const input = document.createElement('input');
+            input.setAttribute('type', properties.type);
+            input.setAttribute('name', properties.name);
+            input.setAttribute('id', properties.id);
+            input.setAttribute('value', properties.value);
+            return input;
+        }
+ 
+        function generateInput(properties) { // best
+            const {type, name, id, value} = properties;
+            const input = document.createElement('input');
+            input.setAttribute('type', type);
+            input.setAttribute('name', name);
+            input.setAttribute('id', id);
+            input.setAttribute('value', value);
+            return input;
+        }
+ 
+        function generateInput({type, name, id, value}) { // better
+            const input = document.createElement('input');
+            input.setAttribute('type', type);
+            input.setAttribute('name', name);
+            input.setAttribute('id', id);
+            input.setAttribute('value', value);
+            return input;
+        }
+    </script>
+</body>
+ 
+ 
+</html> -->
