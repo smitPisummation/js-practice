@@ -1,11 +1,11 @@
 const div = document.getElementById('lower-div');
 const span = document.getElementById('span');
+let valueInput = document.getElementById('textInput');
+const ul = document.createElement('ul');
 
 function addText() {
-    const ul = document.createElement('ul');
     div.append(ul);
 
-    let valueInput = document.getElementById('textInput');
 
     if (valueInput.value === "") {
         alert("Plese Enter Value");
@@ -28,5 +28,7 @@ function addText() {
 
 function removeValue(obj) {
     obj.parentElement.remove();
-    div.append(span);
+    if (ul.children.length === 0) {
+        div.append(span);
+    }
 }
