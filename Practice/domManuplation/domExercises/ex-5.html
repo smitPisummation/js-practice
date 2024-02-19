@@ -1,0 +1,55 @@
+<!-- 5. Write a JavaScript function to add rows to a table.
+Sample HTML file : -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Insert row in a table - w3resource</title>
+</head>
+
+<body>
+    <table id="sampleTable" border="1">
+        <tr>
+            <td>Row1 cell1</td>
+            <td>Row1 cell2</td>
+        </tr>
+        <tr>
+            <td>Row2 cell1</td>
+            <td>Row2 cell2</td>
+        </tr>
+    </table><br>
+    <input type="button" onclick="insert_Row()" value="Insert row">
+    <!-- <input type="button" onclick="changeContent()" value="Change Content"> -->
+
+
+    <script>
+        let count = 3;
+
+        const table = document.getElementById('sampleTable');
+        function insert_Row() {
+
+            const tr = document.createElement('tr');
+            table.append(tr);
+
+            const td1 = document.createElement('td');
+            td1.innerText = `Row${count} Cell1`;
+            tr.append(td1);
+
+            const td2 = document.createElement('td');
+            td2.innerText = `Row${count} Cell2`;
+            tr.append(td2);
+
+            count++;
+        }
+
+        // function changeContent() {
+        //     const childrens = table.children.length + 1;
+        //     console.log(childrens)
+        // }
+
+    </script>
+</body>
+
+</html>

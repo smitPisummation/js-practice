@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            height: 80%;
+            width: 35%;
+            border: 1px solid black;
+            overflow-y: auto;
+        }
+
+        .upper-div {
+            height: 8%;
+            width: 100%;
+            border-bottom: 1px solid black;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        input[type='text'] {
+            height: 80%;
+            font-size: 1rem;
+            padding-left: 5px;
+        }
+
+        input[type='button'] {
+            height: 80%;
+            width: 30%;
+        }
+
+        #lower-div {
+            padding: 10px 20px 10px 30px;
+        }
+
+        form {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        li {
+            margin: 0 0 10px 0;
+            font-size: 1.5rem;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        button {
+            background-color: gray;
+            color: white;
+            font-weight: 600;
+            border-radius: 5px;
+            border: none;
+            padding: 10px;
+        }
+        span{
+            font-size: 1.5rem;
+            font-weight: 600;
+            
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <div class="upper-div">
+            <form action="">
+                <input type="text" name="textInput" id="textInput">
+                <input type="button" name="addBtn" value="Add" onclick="addText()">
+            </form>
+        </div>
+        <div id="lower-div">
+            <span id="span">Add Values Here</span>
+        </div>
+
+    </main>
+
+    <script src="./inputToLi.js"></script>
+</body>
+
+</html>
